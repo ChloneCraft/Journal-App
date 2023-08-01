@@ -1,14 +1,16 @@
 import Header from './components/Header/Header.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import MainContainer from './components/Main/MainContainer.jsx';
-import NewEntryForm from './components/NewEntry';
+import NewEntry from './components/NewEntry/NewEntry.jsx';
+import NavBar from './components/NavBar/NavBar.jsx';
 
 function App() {
   return (
     <>
       <Header />
       <MainContainer>
-        <NewEntryForm></NewEntryForm>
+        <NewEntry />
+        <NavBar />
       </MainContainer>
       <Footer />
     </>

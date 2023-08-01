@@ -1,4 +1,4 @@
-export default function NewEntryForm() {
+export default function NewEntry() {
   return (
     <section className="main__newEntryWrapper">
       <h2>NEW ENTRY</h2>
