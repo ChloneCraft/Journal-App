@@ -1,12 +1,24 @@
 header {
   display: flex;
-  align-items: center;
+  padding: 1.125rem 1rem;
+  flex-direction: column;
   justify-content: center;
-  background-color: rgb(219, 219, 219);
-  color: rgb(20, 20, 20);
-  font-size: 22px;
-  position: relative;
-  top: 0;
-  width: 100vw;
-  height: 20vw;
+  align-items: center;
+  gap: 0.625rem;
+  align-self: stretch;
+  background: var(--water-10, #e4e8f0);
+}
+h1 {
+  color: var(--granite, #252629);
+  text-align: center;
+  font-feature-settings:
+    'clig' off,
+    'liga' off;
+  /* Title */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.125rem; /* 112.5% */
+  text-transform: uppercase;
 }

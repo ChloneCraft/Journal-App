@@ -34,7 +34,12 @@ export default function Entries() {
   return (
     <div>
       {entriesArray.map((entry) => (
-        <Card key={entry.id} motto={entry.motto} notes={entry.notes} />
+        <Card
+          key={entry.id}
+          motto={entry.motto}
+          notes={entry.notes}
+          date={entry.date}
+        />
       ))}
     </div>
   );

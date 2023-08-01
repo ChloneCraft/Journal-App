@@ -1,7 +1,11 @@
+import './newEntry.css';
+
 export default function NewEntry() {
   return (
     <section className="main__newEntryWrapper">
-      <h2>NEW ENTRY</h2>
+      <div className="main__newEntryWrapper__headline">
+        <h2>NEW ENTRY</h2>
+      </div>
       <form className="main__newEntryWrapper__form">
         <div className="mottoInputWrapper">
           <label htmlFor="mottoInput">Motto</label>
@@ -9,9 +13,11 @@ export default function NewEntry() {
         </div>
         <div className="NotesInputWrapper">
           <label htmlFor="notesInput">Notes</label>
-          <input type="text" id="notesInput" name="notesInput" />
+          <textarea id="notesInput" name="notesInput" rows="10" cols="30" />
         </div>
-        <button type="submit">Create</button>
+        <button type="submit" className="submitButton">
+          Create
+        </button>
       </form>
     </section>
   );

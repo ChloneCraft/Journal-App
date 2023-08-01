@@ -1,0 +1,28 @@
+.date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.625rem;
+  align-self: stretch;
+  color: var(--color-granite);
+
+  font-feature-settings:
+    'clig' off,
+    'liga' off;
+
+  /* Headline Uppercase */
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.125rem; /* 128.571% */
+  text-transform: uppercase;
+}
+.cardMottoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  align-self: stretch;
+}
+.motto {
+  display: inline;
+}

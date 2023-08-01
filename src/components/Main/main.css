@@ -1,11 +1,8 @@
 Main {
-  margin: 0;
-  margin-left: 3%;
-  margin-right: 3%;
-  height: 150vh;
-  width: 94vw;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: whitesmoke;
+  padding: 0rem 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  align-self: stretch;
 }
