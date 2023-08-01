@@ -1,0 +1,12 @@
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(36, 37, 39);
+  color: whitesmoke;
+  font-size: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100vw;
+  height: 20vw;
+}
