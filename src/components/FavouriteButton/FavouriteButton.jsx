@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { StarFilled } from '../StarFilled';
-import { Star } from '../Star';
+import star from '../../public/star.svg';
+import starFilled from '../../public/star-filled.svg';
 
 export default function FavouriteButton() {
   const [isFavorite, setFavourite] = useState(false);
@@ -9,7 +9,7 @@ export default function FavouriteButton() {
       className="favouriteButton"
       onClick={() => setFavourite(!isFavorite)}
     >
-      {isFavorite ? <StarFilled /> : <Star />}
+      {isFavorite ? <img src={star} /> : <img src={starFilled} />}
     </button>
   );
 }
