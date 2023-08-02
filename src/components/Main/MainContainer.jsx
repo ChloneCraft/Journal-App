@@ -1,5 +1,6 @@
 import './main.css';
 
-export default function Main() {
-  return <main>content...</main>;
+// eslint-disable-next-line react/prop-types
+export default function Main({ children }) {
+  return <main>{children}</main>;
 }

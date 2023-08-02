@@ -1,0 +1,6 @@
+.favouriteButton {
+  float: left;
+  background-color: transparent;
+  border: none;
+  justify-self: flex-end;
+}
