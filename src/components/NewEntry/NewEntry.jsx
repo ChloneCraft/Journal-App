@@ -6,7 +6,6 @@ export default function NewEntry({ onCreateEntry }) {
     event.preventDefault();
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData);
-    console.log(data.mottoInput);
 
     onCreateEntry(data);
   }

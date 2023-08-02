@@ -28,8 +28,9 @@ p.active {
   color: var(--color-foam);
   background-color: var(--color-nemo);
 }
-nav h2 {
+nav button {
   color: var(--color-granite);
+  border: none;
   font-feature-settings:
     'clig' off,
     'liga' off;
@@ -41,7 +42,7 @@ nav h2 {
   font-weight: 700;
   /* line-height: 1.5rem; 150% */
 }
-h2.active {
+button.active {
   color: var(--color-nemo);
 }
 nav div {

@@ -11,6 +11,7 @@ import { uid } from 'uid';
 export const entriesArray = [
   {
     id: 1000,
+    isFavourite: false,
     date: 'Feb 5, 2025',
     motto: 'We are in a state of chaos',
     notes:
@@ -18,6 +19,7 @@ export const entriesArray = [
   },
   {
     id: 999,
+    isFavourite: false,
     date: 'Feb 4, 2025',
     motto: 'Props, Props, Props',
     notes:
@@ -25,6 +27,7 @@ export const entriesArray = [
   },
   {
     id: 998,
+    isFavourite: false,
     date: 'Feb 3, 2025',
     motto: 'How to nest components online fast',
     notes:
@@ -32,6 +35,7 @@ export const entriesArray = [
   },
   {
     id: 997,
+    isFavourite: false,
     date: 'Feb 2, 2025',
     motto: "I'm a React Developer",
     notes: 'My React-ion when I learned about React: 😍',
@@ -68,11 +72,20 @@ function App() {
       {
         motto: newEntry.mottoInput,
         notes: newEntry.notesInput,
+        isFavourite: false,
         date: date,
         id: uid(),
       },
       ...entriesArray,
     ]);
+  }
+
+  function handleToggleFavourite(id) {
+    setEntries(
+      entries.map((entry) =>
+        entry.id === id ? { ...entry, isFavourite: !entry.isFavourite } : entry,
+      ),
+    );
   }
 
   return (
@@ -81,7 +94,7 @@ function App() {
       <MainContainer>
         <NewEntry onCreateEntry={handleNewEntry} />
         <NavBar />
-        <Entries entries={entries} />
+        <Entries entries={entries} onToggleFavourite={handleToggleFavourite} />
       </MainContainer>
       <Footer />
     </>
