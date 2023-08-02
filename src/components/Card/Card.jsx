@@ -10,7 +10,7 @@ export default function Card({ motto, notes, date }) {
         <h2 className="motto">{motto}</h2>
         <FavouriteButton />
       </div>
-      <p>{notes}</p>
+      <p className="notes">{notes}</p>
     </>
   );
 }

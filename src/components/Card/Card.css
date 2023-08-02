@@ -20,9 +20,32 @@
 .cardMottoWrapper {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
   align-self: stretch;
 }
 .motto {
   display: inline;
+  color: var(--color-granite, #252629);
+  font-feature-settings:
+    'clig' off,
+    'liga' off;
+  /* Body large */
+  /* font-family: Open Sans; */
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5rem; /* 150% */
+}
+.notes {
+  color: var(--color-granite, #252629);
+  font-feature-settings:
+    'clig' off,
+    'liga' off;
+  /* Body small */
+  /* font-family: Open Sans; */
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem; /* 142.857% */
 }

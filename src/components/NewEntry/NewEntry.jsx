@@ -1,6 +1,12 @@
 import './newEntry.css';
+import { entriesArray } from '../Entries/Entries.jsx';
 
-export default function NewEntry() {
+export default function NewEntry(onCreateEntry) {
+  function handleCreate(event) {
+    const form = event.target;
+
+    onCreateEntry();
+  }
   return (
     <section className="main__newEntryWrapper">
       <div className="main__newEntryWrapper__headline">
@@ -15,7 +21,7 @@ export default function NewEntry() {
           <label htmlFor="notesInput">Notes</label>
           <textarea id="notesInput" name="notesInput" rows="10" cols="30" />
         </div>
-        <button type="submit" className="submitButton">
+        <button type="submit" className="submitButton" onClick={handleCreate}>
           Create
         </button>
       </form>
