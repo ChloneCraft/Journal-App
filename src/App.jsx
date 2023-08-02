@@ -6,7 +6,7 @@ import NavBar from './components/NavBar/NavBar.jsx';
 import Entries from './components/Entries/Entries.jsx';
 // import { entriesArray } from '../Entries/Entries.jsx';
 import { useState } from 'react';
-// import {uid} from "uid"; for getting unique ids
+import { uid } from 'uid';
 
 export const entriesArray = [
   {
@@ -38,11 +38,43 @@ export const entriesArray = [
   },
 ];
 
+const monthNames = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
+];
+
 function App() {
-  function handleNewEntry(newEntry) {
-    setEntries([...entriesArray, newEntry]);
-  }
   const [entries, setEntries] = useState(entriesArray);
+
+  function handleNewEntry(newEntry) {
+    const today = new Date();
+    const date =
+      monthNames[today.getMonth()] +
+      ' ' +
+      today.getDate() +
+      ', ' +
+      today.getFullYear();
+    setEntries([
+      {
+        motto: newEntry.mottoInput,
+        notes: newEntry.notesInput,
+        date: date,
+        id: uid(),
+      },
+      ...entriesArray,
+    ]);
+  }
+
   return (
     <>
       <Header />

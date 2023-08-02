@@ -7,8 +7,7 @@ body {
   place-items: center;
   width: 100vw;
   min-height: 100vh;
-  background-color: whitesmoke;
-  background: #fff;
+  background-color: white;
 }
 
 :root {
@@ -34,5 +33,5 @@ body {
   /* hover color for buttons, icons, etc. */
   --color-nemo-dark: #e5430f;
   /* Used for borders and some backgrounds */
-  --color-water-10: #e4e8f0;
+  --color-water-10: #b2bac7;
 }

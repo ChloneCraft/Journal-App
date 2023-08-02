@@ -6,7 +6,7 @@ header {
   align-items: center;
   gap: 0.625rem;
   align-self: stretch;
-  background: var(--water-10, #e4e8f0);
+  background: var(--color-water-10, #e4e8f0);
 }
 h1 {
   color: var(--granite, #252629);

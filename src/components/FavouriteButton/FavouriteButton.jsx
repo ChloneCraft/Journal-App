@@ -10,7 +10,7 @@ export default function FavouriteButton() {
       className="favouriteButton"
       onClick={() => setFavourite(!isFavorite)}
     >
-      {isFavorite ? <img src={star} /> : <img src={starFilled} />}
+      {isFavorite ? <img src={starFilled} /> : <img src={star} />}
     </button>
   );
 }
