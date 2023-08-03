@@ -63,8 +63,15 @@ const monthNames = [
 // });
 
 function App() {
-  const [entries, setEntries] = useState(entriesArray);
-  const [showFavourites, setShowFavourites] = useState(false);
+  const [entries, setEntries] = useLocalStorageState('entriesArray', {
+    defaultValue: entriesArray,
+  });
+  const [showFavourites, setShowFavourites] = useLocalStorageState(
+    'showFavourites',
+    { defaultValue: false },
+  );
+  // const [entries, setEntries] = useState(entriesArray);
+  // const [showFavourites, setShowFavourites] = useState(false);
 
   function handleDisplayFavourites() {
     setShowFavourites(true);
