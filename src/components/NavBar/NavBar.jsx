@@ -11,7 +11,7 @@ export default function NavBar({
   const output = (
     <nav>
       <div>
-        <button className="active" onClick={() => handleDisplayAll()}>
+        <button className="active" onClick={handleDisplayAll}>
           All Entries
         </button>
         <p className="AllEntriesCounter active">{numberAllEntries}</p>
