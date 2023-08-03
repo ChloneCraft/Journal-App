@@ -7,6 +7,7 @@ import Entries from './components/Entries/Entries.jsx';
 // import { entriesArray } from '../Entries/Entries.jsx';
 import { useState } from 'react';
 import { uid } from 'uid';
+import useLocalStorageState from 'use-local-storage-state';
 
 export const entriesArray = [
   {
@@ -57,8 +58,22 @@ const monthNames = [
   'Dec',
 ];
 
+// const [todos, setTodos] = useLocalStorageState("todos", {
+//   defaultValue: [],
+// });
+
 function App() {
   const [entries, setEntries] = useState(entriesArray);
+  const [showFavourites, setShowFavourites] = useState(false);
+
+  function handleDisplayFavourites() {
+    setShowFavourites(true);
+    console.log('handleDisplayFavourites');
+  }
+  function handleDisplayAll() {
+    setShowFavourites(false);
+    console.log('handleDisplayAll');
+  }
 
   function handleNewEntry(newEntry) {
     const today = new Date();
@@ -93,8 +108,15 @@ function App() {
       <Header />
       <MainContainer>
         <NewEntry onCreateEntry={handleNewEntry} />
-        <NavBar />
-        <Entries entries={entries} onToggleFavourite={handleToggleFavourite} />
+        <NavBar
+          handleDisplayFavourites={handleDisplayFavourites}
+          handleDisplayAll={handleDisplayAll}
+        />
+        <Entries
+          showFavourites={showFavourites}
+          entries={entries}
+          onToggleFavourite={handleToggleFavourite}
+        />
       </MainContainer>
       <Footer />
     </>

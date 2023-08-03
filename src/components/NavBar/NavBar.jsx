@@ -1,19 +1,17 @@
 import './NavBar.css';
 
-export default function NavBar() {
+export default function NavBar({ handleDisplayAll, handleDisplayFavourites }) {
   const output = (
     <nav>
       <div>
-        <button className="active" onClick={onclick}>
+        <button className="active" onClick={() => handleDisplayAll()}>
           All Entries
         </button>
         <p className="AllEntriesCounter active">3</p>
       </div>
       <div>
-        <button>Favourites</button>
-        <p className="AllEntriesCounter " onClick={onclick}>
-          1
-        </p>
+        <button onClick={handleDisplayFavourites}>Favourites</button>
+        <p className="AllEntriesCounter ">1</p>
       </div>
     </nav>
   );

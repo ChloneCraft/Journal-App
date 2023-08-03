@@ -30,6 +30,7 @@ p.active {
 }
 nav button {
   color: var(--color-granite);
+  background-color: var(--color-foam);
   border: none;
   font-feature-settings:
     'clig' off,
