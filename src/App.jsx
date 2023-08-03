@@ -70,6 +70,10 @@ function App() {
     'showFavourites',
     { defaultValue: false },
   );
+  const [numberOfFavourites, setNumberOfFavourites] = useLocalStorageState(
+    'numberOfFavourites',
+    { defaultValue: 0 },
+  );
   // const [entries, setEntries] = useState(entriesArray);
   // const [showFavourites, setShowFavourites] = useState(false);
 
@@ -98,11 +102,14 @@ function App() {
         date: date,
         id: uid(),
       },
-      ...entriesArray,
+      ...entries,
     ]);
   }
 
   function handleToggleFavourite(id) {
+    entries.find((entry) => entry.id === id).isFavourite
+      ? setNumberOfFavourites(numberOfFavourites - 1)
+      : setNumberOfFavourites(numberOfFavourites + 1);
     setEntries(
       entries.map((entry) =>
         entry.id === id ? { ...entry, isFavourite: !entry.isFavourite } : entry,
@@ -118,6 +125,8 @@ function App() {
         <NavBar
           handleDisplayFavourites={handleDisplayFavourites}
           handleDisplayAll={handleDisplayAll}
+          numberOfFavourites={numberOfFavourites}
+          entries={entries}
         />
         <Entries
           showFavourites={showFavourites}
