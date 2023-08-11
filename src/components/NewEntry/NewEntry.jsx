@@ -10,7 +10,7 @@ export default function NewEntry({ onCreateEntry }) {
     event.target.reset();
   }
   return (
-    <section className="main__newEntryWrapper">
+    <title className="main__newEntryWrapper">
       <div className="main__newEntryWrapper__headline">
         <h2>NEW ENTRY</h2>
       </div>
@@ -27,6 +27,6 @@ export default function NewEntry({ onCreateEntry }) {
           Create
         </button>
       </form>
-    </section>
+    </title>
   );
 }

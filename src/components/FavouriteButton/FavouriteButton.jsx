@@ -6,10 +6,13 @@ import './FavouriteButton.css';
 export default function FavouriteButton({
   onToggleFavourite,
   isFavourite,
-  id,
+  ButtonID,
 }) {
   return (
-    <button className="favouriteButton" onClick={() => onToggleFavourite(id)}>
+    <button
+      className="favouriteButton"
+      onClick={() => onToggleFavourite(ButtonID)}
+    >
       {isFavourite ? <img src={starFilled} /> : <img src={star} />}
     </button>
   );

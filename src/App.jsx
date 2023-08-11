@@ -67,6 +67,7 @@ function App() {
     );
   }
 
+  console.log(entries.length);
   return (
     <>
       <Header />
@@ -76,7 +77,7 @@ function App() {
           handleDisplayFavourites={handleDisplayFavourites}
           handleDisplayAll={handleDisplayAll}
           numberOfFavourites={numberOfFavourites}
-          entries={entries}
+          entries={entries.length}
         />
         <Entries
           showFavourites={showFavourites}

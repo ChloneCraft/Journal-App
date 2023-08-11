@@ -9,10 +9,10 @@ export default function Entries({
   showFavourites,
 }) {
   const allEntries = (
-    <div>
+    <section>
       {entries.map((entry) => {
         return (
-          <div key={entry.id}>
+          <article key={entry.id}>
             <Card
               motto={entry.motto}
               notes={entry.notes}
@@ -24,19 +24,19 @@ export default function Entries({
             {!(entries.indexOf(entry) === entries.length - 1) && (
               <span className="seperator"></span>
             )}
-          </div>
+          </article>
         );
       })}
-    </div>
+    </section>
   );
   let favouriteEntriesOutput;
   favouriteEntriesOutput = entries.filter((entry) => entry.isFavourite);
   if (favouriteEntriesOutput) {
     favouriteEntriesOutput = (
-      <div>
+      <section>
         {favouriteEntriesOutput.map((entry) => {
           return (
-            <div key={entry.id}>
+            <article key={entry.id}>
               <Card
                 motto={entry.motto}
                 notes={entry.notes}
@@ -48,10 +48,10 @@ export default function Entries({
               {!(entries.indexOf(entry) === entries.length - 1) && (
                 <span className="seperator"></span>
               )}
-            </div>
+            </article>
           );
         })}
-      </div>
+      </section>
     );
   }
   // return showFavourites

@@ -6,15 +6,13 @@ export default function NavBar({
   numberOfFavourites,
   entries,
 }) {
-  let numberAllEntries = entries.length;
-
   const output = (
     <nav>
       <div>
         <button className="active" onClick={handleDisplayAll}>
           All Entries
         </button>
-        <p className="AllEntriesCounter active">{numberAllEntries}</p>
+        <p className="AllEntriesCounter active">{entries}</p>
       </div>
       <div>
         <button onClick={handleDisplayFavourites}>Favourites</button>
